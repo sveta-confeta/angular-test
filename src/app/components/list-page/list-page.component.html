@@ -1,0 +1,42 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item" (click)="readQueryParam()">
+    <a routerLink='/navigator' routerLinkActive="activebutton"
+       [queryParams]="{'tab':'0'}" class="nav-link">Income</a>
+  </li>
+  <li class="nav-item" (click)="readQueryParam()">
+    <a routerLink='/navigator' routerLinkActive="activebutton"
+       [queryParams]="{'tab':'1'}" class="nav-link">Outcome</a>
+  </li>
+  <li class="nav-item" (click)="readQueryParam()">
+    <a routerLink='/navigator' routerLinkActive="activebutton"
+       [queryParams]="{'tab':'2'}" class="nav-link">loan</a>
+  </li>
+  <li class="nav-item" (click)="readQueryParam()">
+    <a routerLink='/navigator' routerLinkActive="activebutton"
+       [queryParams]="{'tab':'3'}" class="nav-link">Investment</a>
+  </li>
+</ul>
+
+<div [ngSwitch]="tab" class="tab-content">
+
+  <p *ngSwitchCase="0">
+    <app-income [data]="data"></app-income>
+  </p>
+  <p *ngSwitchCase="1">
+    <app-outcome [data]="data"></app-outcome>
+  </p>
+  <p *ngSwitchCase="2">
+    <app-loan [data]="data"></app-loan>
+  </p>
+  <p *ngSwitchCase="3">
+    <app-investment [data]="data"></app-investment>
+  </p>
+
+
+</div>
+
+
+
+
+
+

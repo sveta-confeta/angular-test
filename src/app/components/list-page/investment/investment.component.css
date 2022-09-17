@@ -1,0 +1,13 @@
+.table{
+  width: 700px;
+  border: #dcecfb 1px solid;
+  border-top:none
+
+}
+.td,
+.th{
+  text-align: center;
+}
+.tr:hover{
+  background:#bddbfa;
+}

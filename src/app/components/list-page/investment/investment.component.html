@@ -1,0 +1,19 @@
+<table class="table make-sortable">
+  <thead>
+  <tr>
+    <th class="th">Name</th>
+    <th class="th">Acount</th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <tr class="tr" *ngFor="let el of data">
+    <ng-container *ngIf="el.type==='investment'">
+      <td class="td">{{el.name.first}}
+        {{el.name.last}}</td>
+      <td class="td">{{el.address}}</td>
+    </ng-container>
+  </tr>
+  </tbody>
+</table>
